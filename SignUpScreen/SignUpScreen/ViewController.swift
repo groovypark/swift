@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var telTextField: UITextField!
     @IBOutlet weak var blogTextField: UITextField!
+    
     @IBOutlet weak var resultTextView: UITextView!
     
     @IBAction func signUpAction(_ sender: AnyObject) {
@@ -23,7 +24,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        print("textFieldShoudReturn")
-        nameTextField.resignFirstResponder()    // 비활성화 시킴(키보드 내려감)
+//        nameTextField.resignFirstResponder()    // 비활성화 시킴(키보드 내려감)
+        print(textField.text!)
+        textField.resignFirstResponder()
+        
         return true
     }
     
